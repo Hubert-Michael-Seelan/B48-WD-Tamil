@@ -29,7 +29,7 @@ function printData() {
   countries.forEach((coun) => console.log(coun.name))
   countries.forEach((coun) => console.log(coun.region))
   countries.forEach((coun) => console.log(coun.subregion))
-  countries.forEach((coun) => console.log(coun.population));;
+  countries.forEach((coun) => console.log(coun.population));
  }
  
  var request = new XMLHttpRequest();
