@@ -1,1 +1,44 @@
+1. Compare two JSON have the same properties without order
+a. let obj1 = {Name: "Person1",
+                Age: 5};
+b. let obj2 = {Age: 5,
+                Name: "Person1"};
+Answer:
+let obj1 = {"Name": "Person1",
+             "Age": 5};
+let obj2 = {"Age": 5,
+            "Name": "Person1"};
+console.log(JSON.stringify(obj1) === JSON.stringify(obj2)); //False;
+
+2. Display all country flags in console
+Answer: 
+function printData() {
+  const countries = JSON.parse(this.responseText);
+  countries.forEach((coun) => console.log(coun.flags));
+ }
+ 
+ var request = new XMLHttpRequest();
+ request.addEventListener("load", printData);
+ request.open("GET", "https://restcountries.com/v3.1/all");
+ request.send(); 
+
+3. Print all countries names, regions, sub-regions and populations
+Answer:
+function printData() {
+  const countries = JSON.parse(this.responseText);
+  countries.forEach((coun) => console.log(coun.name))
+  countries.forEach((coun) => console.log(coun.region))
+  countries.forEach((coun) => console.log(coun.subregion))
+  countries.forEach((coun) => console.log(coun.population));;
+ }
+ 
+ var request = new XMLHttpRequest();
+ request.addEventListener("load", printData);
+ request.open("GET", "https://restcountries.com/v3.1/all");
+ request.send(); 
+
+
+
+
+  
 
