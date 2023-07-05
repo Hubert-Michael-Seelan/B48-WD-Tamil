@@ -1,14 +1,13 @@
 1. Programs in Anonymous & IIFE Functions
 a. Print Odd Numbers in an Array
 Anonymous: 
- function oddNumber(a) {
+ function (a) {
  for (var i = 0; i < a.length; i++){
  if (a[i] % 2 != 0){
   console.log(a[i]);
  }
  }
  }
- oddNumber([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);  
 IIFE:
  (function(a){
  for(var i = 0 ; i< a.length ; i++){
@@ -18,3 +17,17 @@ IIFE:
  }
  })
  ([1, 2, 3, 4, 5, 6 , 7, 8, 9, 10]) 
+
+b. Convert all the strings to title caps in a string array
+
+
+
+
+
+
+
+
+
+
+
+
