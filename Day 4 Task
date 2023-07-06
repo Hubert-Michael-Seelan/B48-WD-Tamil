@@ -22,13 +22,14 @@ IIFE:
 
 b. Convert all the strings to title caps in a string array
 Anonymous:
-function (string) {
+var Sen = function (string) {
 var sentence = string.toLowerCase().split(" ");
 for(var i = 0; i< sentence.length; i++){
 sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
 }
 console.log(sentence.join(" "));
 }
+Sen("let's run the code"); 
 IIFE:
 (function(string){
 var sentence = string.toLowerCase().split(" ");
@@ -37,6 +38,29 @@ sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
 }
 console.log(sentence.join(" "));
 })("let's run the code");
+
+c. Sum of all numbers in an array
+Anonymous:
+var addNum = function(arr){
+let sum = 0;
+for (let i = 0; i < arr.length; i++){
+sum += arr[i] 
+}
+console.log(sum);
+}
+addNum([2, 3, 4, 5, 6]);
+
+IIFE:
+(function(arr){
+let sum = 0;
+for (let i = 0; i < arr.length; i++){
+sum += arr[i] 
+}
+console.log(sum);
+})([2, 5, 6, 8, 10]); 
+
+d. 
+
 
 
 
