@@ -59,7 +59,58 @@ sum += arr[i]
 console.log(sum);
 })([2, 5, 6, 8, 10]); 
 
-d. 
+d. Return all the prime numbers in an Array
+Anonymous:
+var prime = function(numArray){
+numArray = numArray.filter((number) => {
+for (var i = 2; i <= Math.sqrt(number); i++) {
+if (number % i === 0) 
+return false;
+}
+return true;
+});
+console.log(numArray);
+}
+prime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+IIFE:
+(function (numArray){
+numArray = numArray.filter((number) => {
+for (var i = 2; i <= Math.sqrt(number); i++) {
+if (number % i === 0) 
+return false;
+}
+return true;
+});
+console.log(numArray);
+})([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+e. Return all the palindromes in an array
+Anonymous:
+function PalindromicStrings(arr,N)
+{
+let ans = [];
+for (let i = 0; i < N; i++) {
+if (isPalindrome(arr[i])) {
+ans.push(arr[i]);
+}
+}
+return ans;
+}
+let arr = ["abc", "car", "ada", "racecar", "cool", "madam"];
+let N = arr.length;
+let s = PalindromicStrings(arr, N);
+if(s.length == 0)
+console.log("-1");
+for(let str of s)
+console.log(str);
+
+f. Return Median of two sorted arrays of the same size
+
+
+
+
+
 
 
 
