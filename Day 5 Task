@@ -1,1 +1,42 @@
+1. For the given JSON iterate over all loops (for, for in, for of, forEach)
+For Loop:
+let data = [{
+    "name": "Hubert", 
+    "age": 24, 
+    "qualification": "MSC Mathematics", 
+    "dob": "06-09-1999"
+},
+{
+   "name": "Michael", 
+    "age": 34, 
+    "qualification": "B.ED", 
+    "dob": "01-02-1989"
+}];
+
+for(let i = 0; i < data.length; i++) {
+    let obj = data[i];
+
+    console.log(obj);
+}
+
+ForEach:
+let data = [{
+    "name": "Hubert", 
+    "age": 24, 
+    "qualification": "MSC Mathematics", 
+    "dob": "06-09-1999"
+},
+{
+   "name": "Michael", 
+    "age": 34, 
+    "qualification": "B.ED", 
+    "dob": "01-02-1989"
+}];
+
+data.forEach(function(obj) { 
+console.log(obj); 
+});
+
+
+
 
