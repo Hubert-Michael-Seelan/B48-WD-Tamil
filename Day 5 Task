@@ -57,19 +57,19 @@ for (let x in data) {
 
 2. Create your own resume JSON Format
 var data = [{
-    "Name"          		: "Hubert Michael Seelan A", 
-    "Age"					: "24", 
+    "Name"          	    : "Hubert Michael Seelan A", 
+    "Age"		    : "24", 
     "Highest_Qualification" : "MSC Mathematics", 
-    "DOB"					: "06-09-1999",
-    "Phone_Number"			: "9444455555"
+    "DOB"		    : "06-09-1999",
+    "Phone_Number"	    : "9444455555"
 },
 {
-	"Technical Skills"      : "HTML, CSS, JavaScript, MYSQL, AWS",
-    "Work Experience"		: "US IT Recruiter",
-	"Year_of_ Experience"	: "1 Year 3 Months"
+    "Technical Skills"      : "HTML, CSS, JavaScript, MYSQL, AWS",
+    "Work Experience"	    : "US IT Recruiter",
+    "Year_of_ Experience"   : "1 Year 3 Months"
 },
 {
-	"Hobbies"				: "Chess, Cricket, Anime, Books",
+    "Hobbies"		    : "Chess, Cricket, Anime, Books",
 }
 ];
 console.log(data);
