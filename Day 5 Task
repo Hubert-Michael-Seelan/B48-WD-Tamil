@@ -19,7 +19,7 @@ for(let i = 0; i < data.length; i++) {
     console.log(obj);
 }
 
-ForEach:
+ForEach Loop:
 let data = [{
     "name": "Hubert", 
     "age": 24, 
@@ -37,6 +37,39 @@ data.forEach(function(obj) {
 console.log(obj); 
 });
 
+For in Loop:
+let data = [{
+    "name": "Hubert", 
+    "age": 24, 
+    "qualification": "MSC Mathematics", 
+    "dob": "06-09-1999"
+},
+{
+   "name": "Michael", 
+    "age": 34, 
+    "qualification": "B.ED", 
+    "dob": "01-02-1989"
+}];
 
+for (let x in data) {
+   console.log(data[x]);
+}
 
-
+2. Create your own resume JSON Format
+var data = [{
+    "Name"          		: "Hubert Michael Seelan A", 
+    "Age"					: "24", 
+    "Highest_Qualification" : "MSC Mathematics", 
+    "DOB"					: "06-09-1999",
+    "Phone_Number"			: "9444455555"
+},
+{
+	"Technical Skills"      : "HTML, CSS, JavaScript, MYSQL, AWS",
+    "Work Experience"		: "US IT Recruiter",
+	"Year_of_ Experience"	: "1 Year 3 Months"
+},
+{
+	"Hobbies"				: "Chess, Cricket, Anime, Books",
+}
+];
+console.log(data);
