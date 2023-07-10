@@ -1,0 +1,25 @@
+1. 
+class Movie {
+constructor(title, studio, rating){
+this.title = title;
+this.studio = studio;
+this.rating = rating || "PG";
+}
+getPG(data = []){
+     let newArray = [];
+     return newArray;
+		}
+  
+} 
+
+
+const data1 = new Movie("Casino Royale", "Eon Productions", "PG13");
+const data2 = new Movie("Black Panther", "Marvel Studios", undefined);
+const data3 = new Movie("Joker", "WB Studios", "R");
+const data4 = new Movie("Ghosted", "Chris Studios", "PG");
+console.log(data2);
+data1.getPG;
+
+2. 
+
+
