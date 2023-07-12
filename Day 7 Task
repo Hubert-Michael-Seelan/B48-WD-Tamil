@@ -31,5 +31,44 @@ b. Get all the countries with a population less than 200000 using filter method
  request.send(); 
 
 c. Print the following details name, capital, flag using ForEach
+ function printData() {
+  const countries = JSON.parse(this.responseText);
+  countries.forEach((coun) => console.log(coun.name, coun.capital, coun.flag));
+  }
+ 
+ var request = new XMLHttpRequest();
+ request.addEventListener("load", printData);
+ request.open("GET", "https://restcountries.com/v3.1/all");
+ request.send(); 
+
+d. Print the total population of the countries using reduce method
+ function printData() {
+  const countries = JSON.parse(this.responseText);
+  let totpopu = countries.reduce((acc, element)=> acc + element.population);
+  console.log(totpopu);
+  
+  }
+   
+   var request = new XMLHttpRequest();
+   request.addEventListener("load", printData);
+   request.open("GET", "https://restcountries.com/v3.1/all");
+   request.send(); 
+
+e. Print the countries which uses US dollar as Currency
+ function printData() {
+  const countries = JSON.parse(this.responseText);
+   var cur=[];
+        for(i=0;i<countries.length;i++){
+            if(countries[i].currencies[0].code==="USD")
+            {
+            console.log("name:",data[i].name,"==>",data[i].currencies[0].code)
+            }
+            }
+            }
+   var request = new XMLHttpRequest();
+   request.addEventListener("load", printData);
+   request.open("GET", "https://restcountries.com/v3.1/all");
+   request.send();
+
 
 
