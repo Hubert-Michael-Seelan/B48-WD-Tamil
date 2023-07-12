@@ -6,19 +6,19 @@ this.studio = studio;
 this.rating = rating || "PG";
 }
 getPG(data = []){
-     let newArray = [];
-     return newArray;
+     return data.filter((d)=> d.rating === "PG");
 		}
   
 } 
 
+const moviedata = new Movie();
+var movielist = [new Movie("Casino Royale", "Eon Productions", "PG13"),
+new Movie("Black Panther", "Marvel Studios", undefined),
+new Movie("Joker", "WB Studios", "R"),
+new Movie("Ghosted", "Chris Studios", "PG"), new Movie("Avatar", "James Studio", "PG")];
 
-const data1 = new Movie("Casino Royale", "Eon Productions", "PG13");
-const data2 = new Movie("Black Panther", "Marvel Studios", undefined);
-const data3 = new Movie("Joker", "WB Studios", "R");
-const data4 = new Movie("Ghosted", "Chris Studios", "PG");
-console.log(data2);
-data1.getPG;
+console.log(moviedata.getPG(movielist));
+movielist.forEach((m)=>console.log(m)); 
 
 2. 
 
