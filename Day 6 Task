@@ -18,8 +18,24 @@ new Movie("Joker", "WB Studios", "R"),
 new Movie("Ghosted", "Chris Studios", "PG"), new Movie("Avatar", "James Studio", "PG")];
 
 console.log(moviedata.getPG(movielist));
-movielist.forEach((m)=>console.log(m)); 
+movielist.forEach((m)=>console.log(m));
 
-2. 
+4. write a class to calculate uber price.
+class UberJourney {
+   
+ constructor(kmsTravelled = 0, pricePerKilometer = 0) {
+      this.kmsTravelled = kmsTravelled;
+      this.pricePerKilometer = pricePerKilometer;
+   }
+   
+   calculateJourneyPrice() {
+      return this.kmsTravelled * this.pricePerKilometer }
+}
+
+const persondata = new UberJourney(10, 5);
+console.log(persondata.calculateJourneyPrice());
+
+
+
 
 
