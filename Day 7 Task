@@ -1,0 +1,35 @@
+
+1. 
+a. Get all the countries from Asia using Filter Method
+  function printData() {
+  const countries = JSON.parse(this.responseText);
+  let coun = countries.filter((element)=>{
+  if(element.region === "Asia")
+  return element.name;
+  })
+  console.log(coun);  
+  }
+ 
+ var request = new XMLHttpRequest();
+ request.addEventListener("load", printData);
+ request.open("GET", "https://restcountries.com/v3.1/all");
+ request.send(); 
+
+b. Get all the countries with a population less than 200000 using filter method
+  function printData() {
+  const countries = JSON.parse(this.responseText);
+  let popu = countries.filter((element)=>{
+  if(element.population < 200000)
+  return element.name;
+  })
+  console.log(popu);  
+  }
+ 
+ var request = new XMLHttpRequest();
+ request.addEventListener("load", printData);
+ request.open("GET", "https://restcountries.com/v3.1/all");
+ request.send(); 
+
+c. Print the following details name, capital, flag using ForEach
+
+
