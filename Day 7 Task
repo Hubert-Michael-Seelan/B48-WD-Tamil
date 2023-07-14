@@ -55,20 +55,21 @@ d. Print the total population of the countries using reduce method
    request.send(); 
 
 e. Print the countries which uses US dollar as Currency
- function printData() {
-  const countries = JSON.parse(this.responseText);
-   var cur=[];
-        for(i=0;i<countries.length;i++){
-            if(countries[i].currencies[0].code==="USD")
-            {
-            console.log("name:",data[i].name,"==>",data[i].currencies[0].code)
-            }
-            }
-            }
-   var request = new XMLHttpRequest();
-   request.addEventListener("load", printData);
-   request.open("GET", "https://restcountries.com/v3.1/all");
-   request.send();
+ fetch("https://restcountries.com/v3.1/all")
+ .then((response) => response.json())
+ .then((data) => printData(filterData(data)))
+ .catch((error) => console.log(error));
+
+ function filterData(data) {
+ let filteredData = [];
+ if (data.length > 0) {
+   filteredData = data.filter((data) => data?.currencies?.USD);
+   }
+   return filteredData;
+   }
+   function printData(data) {
+   console.log(data);
+   }
 
 
 
