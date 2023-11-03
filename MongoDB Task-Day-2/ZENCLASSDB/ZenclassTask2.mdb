@@ -1,0 +1,117 @@
+1.Find all the topics and tasks which are thought in the month of October
+
+Ans:
+db.Tasks.find({Month:"October"}).projection({Task:1}){
+  _id: ObjectId("64c3685bb7042735413b456f"),
+  Task: 'Webpage-Database deployment'
+}
+
+2.Find all the company drives which appeared between 15-10-2023 and 31-10-2023
+
+Ans:
+db.Company_Drive.find({Appeared_Date:{
+$gt:"15-10-2023",$lt:"30-10-2023"
+}});
+
+{
+  _id: ObjectId("64c36da9b7042735413b4570"),
+  Company: 'Zoho',
+  User_Appeared: 'Sunil Surendran',
+  Appeared_Date: '15-10-23'
+},
+{
+  _id: ObjectId("64c36da9b7042735413b4573"),
+  Company: 'Amazon',
+  User_Appeared: 'Dhanush',
+  Appeared_Date: '16-10-2023'
+}
+
+3.Find all the company drives and students who are appeared for the placement.
+
+Ans:
+db.Company_Drive.find().projection({Company:1,User_Appeared:1,_id:0})
+
+{
+  Company: 'Zoho',
+  User_Appeared: 'Sunil Surendran'
+}
+{
+  Company: 'Cognizant',
+  User_Appeared: 'Arun Kumar'
+}
+{
+  Company: 'TCS',
+  User_Appeared: 'Joyson Jeevith'
+}
+{
+  Company: 'Amazon',
+  User_Appeared: 'Dhanush'
+}
+{
+  Company: 'HCL',
+  User_Appeared: 'Vignesh'
+}
+
+4.Find the number of problems solved by the user in codekata
+
+Ans:
+db.Codekada.find().projection({user:1,problem_solved:1,_id:0})
+
+{
+  user: 'Arun Kmuar',
+  problem_solved: 5
+}
+{
+  user: 'Sunil Surendran',
+  problem_solved: 10
+}
+{
+  user: 'Joyson Jeevith',
+  problem_solved: 20
+}
+{
+  user: 'Vignesh',
+  problem_solved: 30
+}
+{
+  user: 'Dhanush',
+  problem_solved: 30
+}
+
+5.Find all the mentors with who has the mentee's count more than 15
+Ans:
+db.Mentor.find({total_students:{$gt:15}}).projection({_id:0,mentor_name:1,total_students:1})
+
+{
+  mentor_name: 'John Smith',
+  total_students: 20
+}
+{
+  mentor_name: 'Michael Lee',
+  total_students: 18
+}
+{
+  mentor_name: 'David Wang',
+  total_students: 25
+}
+
+6. Find the number of users who are absent and task is not submitted  between 15-10-2023 and 31-10-2023
+
+Ans:
+db.attendance.find({Attendance:{oct:false}})
+db.user.find
+
+db.users.find({Task_submission:"no"}).projection({name:1,Task_submission:1,_id:0});
+
+{
+  name: 'vignesh',
+  Task_submission: 'no'
+}
+{
+  name: 'Joyson Jeevith',
+  Task_submission: 'no'
+}
+{
+  name: 'Dhansuh',
+  Task_submission: 'no'
+}
