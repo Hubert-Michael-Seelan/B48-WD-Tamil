@@ -9,7 +9,7 @@ ans:db.products.find({product_price:{$gt:400,$lt:800}})
 ans:db.products.find({ product_price: { $lt: 400, $gt: 600 } })
 
 
-4.List the four product which are grater than 500 in price 
+4.List the four product which are greater than 500 in price 
 ans:db.products.find({product_price:{$gt:500}}).limit(4)
 
 5.Find the product name and product material of each products
